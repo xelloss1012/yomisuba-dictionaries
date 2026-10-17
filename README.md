@@ -1,6 +1,6 @@
-# EReader dictionaries
+# Yomisuba dictionaries
 
-Optional dictionaries of Japanese words that the EReader app downloads on demand from its settings screen, one per interface language without a bundled dictionary. Spanish and English (JMdict) ship with the app.
+Optional dictionaries of Japanese words that [Yomisuba](https://github.com/xelloss1012/yomisuba) (読みの素晴らしい世界に祝福を！), an EPUB reader for vertical Japanese, downloads on demand from its settings screen, one per interface language without a bundled dictionary. Spanish and English (JMdict) ship with the app.
 
 | File | Glosses | Entries | Source | License |
 |---|---|---|---|---|
@@ -12,7 +12,7 @@ Optional dictionaries of Japanese words that the EReader app downloads on demand
 | `wiktionary-it.json.gz` | Italian | 2,763 | [Italian Wiktionary](https://it.wiktionary.org/) | CC BY-SA 4.0 |
 | `wiktionary-vi.json.gz` | Vietnamese | 1,645 | [Vietnamese Wiktionary](https://vi.wiktionary.org/) | CC BY-SA 4.0 |
 
-Each file is an adaptation of its source and is distributed under the same license ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)). The Wiktionary files come from the extracts published by [kaikki.org](https://kaikki.org/) (wiktextract); JMdict data from the [EDRDG](https://www.edrdg.org/) release of 2026-10-15.
+Each file is an adaptation of its source and is distributed under the same license ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)). The Wiktionary files are based on the work of the Wiktionary contributors, through the extracts published by [kaikki.org](https://kaikki.org/) (wiktextract); JMdict data from the [EDRDG](https://www.edrdg.org/) release of 2026-10-15.
 
 ## Format
 
@@ -26,7 +26,7 @@ A gzip-compressed JSON array of entries:
 
 ## Regenerating
 
-With the scripts of the app repository:
+With the scripts of the [app repository](https://github.com/xelloss1012/yomisuba):
 
 ```sh
 # JMdict (fre, ger, …)
