@@ -14,6 +14,19 @@ Optional dictionaries of Japanese words that [Yomisuba](https://github.com/xello
 
 Each file is an adaptation of its source and is distributed under the same license ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)). The Wiktionary files are based on the work of the Wiktionary contributors, through the extracts published by [kaikki.org](https://kaikki.org/) (wiktextract); JMdict data from the [EDRDG](https://www.edrdg.org/) release of 2026-10-15.
 
+## Kanji data
+
+`kanji-extra.json.gz` is the optional download "More kanji" of the kanji cards: the stroke order of 6,431 kanji and the card of the 10,109 kanji of KANJIDIC2 outside the jōyō and jinmeiyō lists (the ~3,000 of those ship with the app).
+
+- Strokes: [KanjiVG](https://kanjivg.tagaini.net) © Ulrich Apel, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) (release r20260714), with the coordinates rounded to one decimal.
+- Cards: [KANJIDIC2](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project) and [KRADFILE](https://www.edrdg.org/krad/kradinf.html) © EDRDG, [CC BY-SA 4.0](https://www.edrdg.org/edrdg/licence.html).
+
+```json
+{ "strokes": { "激": ["M16.4,19.5c…", "…"] }, "kanji": { "鬮": { "s": 26, "on": ["キュウ"], "m": { "en": ["lottery"] }, "c": ["…"] } } }
+```
+
+Each stroke is an SVG path in a 109×109 box, in the order it is written. Built with `python scripts/build_kanji_extra.py kanjidic2.xml.gz kradfile.gz kanjivg.xml.gz kanji-extra.json.gz`; after publishing a new one, update `version` and `approxBytes` in `src/utils/kanjiExtra.ts`.
+
 ## Format
 
 A gzip-compressed JSON array of entries:
